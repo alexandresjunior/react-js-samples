@@ -1,0 +1,16 @@
+{
+    "states": [
+        {
+            "id": "1",
+            "name": "Recife"
+        },
+        {
+            "id": "2",
+            "name": "São Paulo"
+        },
+        {
+            "id": "3",
+            "name": "Rio de Janeiro"
+        }
+    ]
+}
