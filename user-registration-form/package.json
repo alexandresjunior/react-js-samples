@@ -11,6 +11,7 @@
     "@clayui/css": "^3.38.0",
     "@clayui/panel": "^3.38.0",
     "@clayui/modal": "^3.38.0",
+    "@clayui/multi-step-nav": "^3.38.0",
     "axios": "^0.22.0",
     "json-server": "^0.16.3"
   },
