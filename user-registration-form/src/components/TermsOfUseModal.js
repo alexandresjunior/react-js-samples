@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import ClayButton from "@clayui/button";
 import ClayModal, { useModal } from "@clayui/modal";
-import ClayLink from '@clayui/link';
+import ClayLink from "@clayui/link";
 
 // Imports the @clayui/css package CSS
 import "@clayui/css/lib/css/atlas.css";
 
-const TermsOfUseModal = ({acceptanceToU, setAcceptanceToU}) => {
+const TermsOfUseModal = ({ acceptanceToU, setAcceptanceToU }) => {
   const [visible, setVisible] = useState(false);
 
   const { observer, onClose } = useModal({
-    onClose: () => setVisible(false)  
+    onClose: () => setVisible(false),
   });
 
   const onAgreement = () => {
@@ -22,7 +22,9 @@ const TermsOfUseModal = ({acceptanceToU, setAcceptanceToU}) => {
     <>
       {visible && (
         <ClayModal observer={observer} size="lg" status="info">
-          <ClayModal.Header className="text-center">Terms of Use</ClayModal.Header>
+          <ClayModal.Header className="text-center">
+            Terms of Use
+          </ClayModal.Header>
 
           <ClayModal.Body className="text-center">
             <p>
@@ -35,7 +37,9 @@ const TermsOfUseModal = ({acceptanceToU, setAcceptanceToU}) => {
           <ClayModal.Footer
             first={
               <ClayButton.Group spaced>
-                <ClayButton displayType="secondary" onClick={onClose}>Close</ClayButton>
+                <ClayButton displayType="secondary" onClick={onClose}>
+                  Close
+                </ClayButton>
               </ClayButton.Group>
             }
             last={<ClayButton onClick={onAgreement}>I agree</ClayButton>}

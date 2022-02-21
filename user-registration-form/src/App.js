@@ -1,9 +1,7 @@
-import RegistrationForm from './components/RegistrationForm';
+import RegistrationForm from "./components/RegistrationForm";
 
 const App = () => {
-  return (
-    <RegistrationForm />
-  )  
-}
+  return <RegistrationForm />;
+};
 
 export default App;
