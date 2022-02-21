@@ -116,7 +116,7 @@ const ContactData = () => {
                             <ClaySelect 
                                 id="state"
                                 name="state"
-                                defaultValue={state}
+                                defaultValue={state.id}
                                 onClick={(event) => {
                                     setState(event.target.value);                            
                                 }}
