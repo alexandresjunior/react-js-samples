@@ -34,10 +34,39 @@ const RegistrationForm = () => {
     },
   ];
 
+  const validate = (schema) => (values) =>
+    schema
+      .validate(values, {
+        abortEarly: false,
+        strict: false,
+      })
+      .then(() => ({}))
+      .catch(({ inner }) =>
+        inner.reduce(
+          (memo, { path, message }) => ({
+            ...memo,
+            [path]: (memo[path] || []).concat(message),
+          }),
+          {}
+        )
+      );
+
   const forms = [
-    <PersonalData currentStep={currentStep} setCurrentStep={setCurrentStep} />,
-    <ContactData currentStep={currentStep} setCurrentStep={setCurrentStep} />,
-    <SecurityData currentStep={currentStep} setCurrentStep={setCurrentStep} />,
+    <PersonalData
+      currentStep={currentStep}
+      setCurrentStep={setCurrentStep}
+      validate={validate}
+    />,
+    <ContactData
+      currentStep={currentStep}
+      setCurrentStep={setCurrentStep}
+      validate={validate}
+    />,
+    <SecurityData
+      currentStep={currentStep}
+      setCurrentStep={setCurrentStep}
+      validate={validate}
+    />,
   ];
 
   return (
