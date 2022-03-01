@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PersonalData from "./PersonalData";
 import ContactData from "./ContactData";
 import SecurityData from "./SecurityData";
+import SuccessPage from "./SuccessPage";
 import ClayMultiStepNav from "@clayui/multi-step-nav";
 
 // Imports the @clayui/css package CSS
@@ -16,21 +17,28 @@ const RegistrationForm = () => {
       complete: currentStep > 0,
       onClick: () => setCurrentStep(0),
       subTitle: "Personal Data",
-      title: "Step 1 of 3",
+      title: "Step 1 of 4",
     },
     {
       active: currentStep === 1,
       complete: currentStep > 1,
       onClick: () => setCurrentStep(1),
       subTitle: "Contact Data",
-      title: "Step 2 of 3",
+      title: "Step 2 of 4",
     },
     {
       active: currentStep === 2,
       complete: currentStep > 2,
       onClick: () => setCurrentStep(2),
       subTitle: "Security Data",
-      title: "Step 3 of 3",
+      title: "Step 3 of 4",
+    },
+    {
+      active: currentStep === 3,
+      complete: currentStep > 3,
+      onClick: () => setCurrentStep(3),
+      subTitle: "Done!",
+      title: "Step 4 of 4",
     },
   ];
 
@@ -67,6 +75,7 @@ const RegistrationForm = () => {
       setCurrentStep={setCurrentStep}
       validate={validate}
     />,
+    <SuccessPage />,
   ];
 
   return (
