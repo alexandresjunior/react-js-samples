@@ -15,4 +15,4 @@ Sample apps built using React JS
 * To Do
 
 ## E-commerce App
-* To Do
+* Built using [Bootstrap template](https://startbootstrap.com/templates/ecommerce)
