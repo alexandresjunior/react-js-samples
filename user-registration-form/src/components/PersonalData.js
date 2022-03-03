@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import ClayForm, { ClayInput, ClaySelect } from "@clayui/form";
+import ClayForm, { ClayInput, ClaySelect, ClayCheckbox } from "@clayui/form";
 import ClayButton from "@clayui/button";
 import ClayPanel from "@clayui/panel";
 import { initPersonalData } from "../model/index";
@@ -174,8 +174,46 @@ const PersonalData = ({ currentStep, setCurrentStep }) => {
               }}
               onBlur={validateFields}
             />
-            {!errors.password.isValid &&
-              ErrorFeedback(errors.password.helperText)}
+            
+            {/* {!errors.password.isValid &&
+              ErrorFeedback(errors.password.helperText)} */}
+
+            {!isEmpty(password) && (
+              <div className="form-group mx-sm-4 mt-3">
+                <div className="mx-3 password-validations">
+                  <ClayCheckbox
+                    checked={password.length > 6}
+                    label={"It contains at least 6 characters"}
+                    readOnly
+                    disabled
+                  />
+                  <ClayCheckbox
+                    checked={password.match("(.*[A-Z].*)")}
+                    label={"It contains at least 1 uppercase letter"}
+                    readOnly
+                    disabled
+                  />
+                  <ClayCheckbox
+                    checked={password.match("(.*[a-z].*)")}
+                    label={"It contains at least 1 lowercase letter"}
+                    readOnly
+                    disabled
+                  />
+                  <ClayCheckbox
+                    checked={password.match("(.*\\d.*)")}
+                    label={"It contains at least 1 numeric value"}
+                    readOnly
+                    disabled
+                  />
+                  <ClayCheckbox
+                    checked={password.match("[!@#$%^&*]")}
+                    label={"It contains at least 1 special value"}
+                    readOnly
+                    disabled
+                  />
+                </div>
+              </div>
+            )}
           </ClayForm.Group>
 
           <ClayForm.Group
