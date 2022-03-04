@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navigation = ({ cart }) => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-chocolate">
       <div className="container px-4 px-lg-5">
-        <a className="navbar-brand" href="#!">
+        <Link className="navbar-brand" to={"/"}>
           E-commerce React App
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -23,10 +24,10 @@ const Navigation = ({ cart }) => {
           id="navbarSupportedContent"
         >
           <form className="d-flex">
-            <button className="btn btn-outline-dark" type="submit">
+            <button className="btn btn-outline-light" type="submit">
               <i className="bi-cart-fill me-1"></i>
               Cart
-              <span className="badge bg-dark text-white ms-1 rounded-pill">
+              <span className="badge bg-light text-dark ms-1 rounded-pill">
                 {cart}
               </span>
             </button>

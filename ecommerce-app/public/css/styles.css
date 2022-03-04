@@ -41,6 +41,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
+  --bs-chocolate-rgb: 38, 17, 0;
   --bs-primary-rgb: 13, 110, 253;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
@@ -7840,6 +7841,11 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
 }
 
+.bg-chocolate {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-chocolate-rgb), var(--bs-bg-opacity)) !important;
+}
+
 .bg-dark {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
@@ -11285,4 +11291,10 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+
+.header-products {
+  background-image: url("https://eskipaper.com/images/chocolate-cake-13.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
 }

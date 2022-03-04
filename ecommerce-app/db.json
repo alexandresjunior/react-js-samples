@@ -4,6 +4,7 @@
       "id": 1,
       "category": "cakes",
       "name": "Naked Cake",
+      "image": "https://i0.wp.com/fornerialuce.com.br/wp-content/uploads/2021/11/forneria-027.jpg?fit=1024%2C1024&ssl=1",
       "size_options": [
         {
           "id": 1,
@@ -97,24 +98,28 @@
       "id": 2,
       "category": "sweets",
       "name": "Dark Chocolate Ball",
+      "image": "https://lojapatriciagoedert.com.br/pub/media/catalog/product/cache/b03a9cd26fecaeeebab8d063541bf09c/b/r/brigadeiro_01.jpg",
       "price": 1
     },
     {
       "id": 3,
       "category": "sweets",
       "name": "White Chocolate Ball",
+      "image": "https://confeitag.com.br/wp/wp-content/uploads/2012/08/brigadeiro_branco_IMG_6602-324x324.jpg",
       "price": 1
     },
     {
       "id": 4,
       "category": "sweets",
       "name": "Strawberry Ball",
+      "image": "https://images.rappi.com.br/products/ddd5e36f-8dd0-4a3f-9cf2-9af4792ed2f2-1632247907104.png",
       "price": 1.1
     },
     {
       "id": 5,
       "category": "cookies",
       "name": "Sugar Cookies",
+      "image": "https://www.twosisterscrafting.com/wp-content/uploads/2020/10/best-sugar-cookie-recipe-1200-featured-735x735.jpg",
       "flavor_options": [
         {
           "id": 1,
@@ -146,6 +151,123 @@
           "price": 50
         }
       ]
+    },
+    {
+      "id": 6,
+      "category": "cakes",
+      "name": "Vulcano Cake",
+      "image": "https://p7m4z9n9.stackpathcdn.com/wp-content/uploads/2020/05/bolovulcaochocolate-morango.jpg",
+      "size_options": [
+        {
+          "id": 1,
+          "name": "P",
+          "price": 25
+        },
+        {
+          "id": 2,
+          "name": "M",
+          "price": 40
+        },
+        {
+          "id": 3,
+          "name": "G",
+          "price": 55
+        }
+      ],
+      "dough_flavor_options": [
+        {
+          "id": 1,
+          "name": "Chocolate"
+        },
+        {
+          "id": 2,
+          "name": "Vanilla"
+        },
+        {
+          "id": 3,
+          "name": "Strawberry"
+        },
+        {
+          "id": 4,
+          "name": "Churros"
+        },
+        {
+          "id": 5,
+          "name": "Orange"
+        }
+        
+      ],
+      "filling_options": [
+        {
+          "id": 1,
+          "name": "Chocolate"
+        },
+        {
+          "id": 2,
+          "name": "Vanilla"
+        },
+        {
+          "id": 3,
+          "name": "Strawberry"
+        },
+        {
+          "id": 4,
+          "name": "Churros"
+        }
+      ],
+      "top_options": [
+        {
+          "id": 1,
+          "name": "Chocolate"
+        },
+        {
+          "id": 2,
+          "name": "Vanilla"
+        },
+        {
+          "id": 3,
+          "name": "Strawberry"
+        },
+        {
+          "id": 4,
+          "name": "Churros"
+        },
+        {
+          "id": 5,
+          "name": "Lemon"
+        }
+      ],
+      "extra_options": [
+        {
+          "id": 1,
+          "name": "KitKat",
+          "price": 7.5
+        },
+        {
+          "id": 2,
+          "name": "Oreo",
+          "price": 5
+        },
+        {
+          "id": 3,
+          "name": "White Chocolate Shavings",
+          "price": 3.5
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "category": "sweets",
+      "name": "Alfajor",
+      "image": "https://luganobr.vteximg.com.br/arquivos/ids/156020-1000-1000/alfajor-recheado-de-doce-de-leite-coberto-com-chocolate-ao-leite-lugano-60g-ambientada.jpg?v=637087532678100000",
+      "price": 5
+    },
+    {
+      "id": 8,
+      "category": "sweets",
+      "name": "Brownie",
+      "image": "https://i.pinimg.com/originals/0c/34/9e/0c349e1228d4aa90ac06555185fb45b9.jpg",
+      "price": 3.5
     }
   ]
 }

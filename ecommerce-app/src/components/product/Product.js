@@ -44,8 +44,8 @@ const Product = ({ cart, setCart }) => {
           <div className="col-md-6">
             <img
               className="card-img-top mb-5 mb-md-0"
-              src="https://dummyimage.com/600x700/dee2e6/6c757d.jpg"
-              alt="..."
+              src={product.image}
+              alt={product.name}
             />
           </div>
 
