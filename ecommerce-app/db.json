@@ -6,47 +6,89 @@
             "name": "Naked Cake",
             "size_options": [
                 {
-                    "size": "P",
+                    "id": 1,
+                    "name": "P",
                     "price": 20
                 },
                 {
-                    "size": "M",
+                    "id": 2,
+                    "name": "M",
                     "price": 35
                 },
                 {
-                    "size": "G",
+                    "id": 3,
+                    "name": "G",
                     "price": 50
                 }
             ],
             "dough_flavor_options": [
-                "Chocolate",
-                "Vanilla",
-                "Strawberry",
-                "Churros"
+                {
+                    "id": 1,
+                    "name": "Chocolate"
+                },
+                {
+                    "id": 2,
+                    "name": "Vanilla"
+                },
+                {
+                    "id": 3,
+                    "name": "Strawberry"
+                },
+                {
+                    "id": 4,
+                    "name": "Churros"
+                }
             ],
             "filling_options": [
-                "Chocolate",
-                "Vanilla",
-                "Strawberry",
-                "Churros"
+                {
+                    "id": 1,
+                    "name": "Chocolate"
+                },
+                {
+                    "id": 2,
+                    "name": "Vanilla"
+                },
+                {
+                    "id": 3,
+                    "name": "Strawberry"
+                },
+                {
+                    "id": 4,
+                    "name": "Churros"
+                }
             ],
             "top_options": [
-                "Chocolate",
-                "Vanilla",
-                "Strawberry",
-                "Churros"
+                {
+                    "id": 1,
+                    "name": "Chocolate"
+                },
+                {
+                    "id": 2,
+                    "name": "Vanilla"
+                },
+                {
+                    "id": 3,
+                    "name": "Strawberry"
+                },
+                {
+                    "id": 4,
+                    "name": "Churros"
+                }
             ],
             "extra_options": [
                 {
-                    "extra": "KitKat",
+                    "id": 1,
+                    "name": "KitKat",
                     "price": 7.5
                 },
                 {
-                    "extra": "Oreo",
+                    "id": 2,
+                    "name": "Oreo",
                     "price": 5
                 },
                 {
-                    "extra": "White Chocolate Shavings",
+                    "id": 3,
+                    "name": "White Chocolate Shavings",
                     "price": 3.5
                 }
             ]
@@ -74,21 +116,33 @@
             "category": "cookies",
             "name": "Sugar Cookies",
             "flavor_options": [
-                "Chocolate",
-                "Vanilla",
-                "Lemon"
+                {
+                    "id": 1,
+                    "name": "Chocolate"
+                },
+                {
+                    "id": 2,
+                    "name": "Vanilla"
+                },
+                {
+                    "id": 3,
+                    "name": "Lemon"
+                }
             ],
             "size_options": [
                 {
-                    "size": "250g",
+                    "id": 1,
+                    "name": "250g",
                     "price": 15
                 },
                 {
-                    "size": "500g",
+                    "id": 2,
+                    "name": "500g",
                     "price": 25
                 },
                 {
-                    "size": "1kg",
+                    "id": 3,
+                    "name": "1kg",
                     "price": 50
                 }
             ]
