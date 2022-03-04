@@ -1,6 +1,6 @@
 import React from "react";
 
-const Cakes = ({ product, updatePrice, setNumber }) => {
+const Cakes = ({ product, updatePrice }) => {
   return (
     <>
       <div className="row mt-5 mb-3">
@@ -9,7 +9,7 @@ const Cakes = ({ product, updatePrice, setNumber }) => {
             id="size-options"
             className="form-select"
             aria-label="size options"
-            onChange={() => updatePrice(product.category)}
+            onChange={() => updatePrice(product.category, 1)}
             defaultValue="Choose a size option"
           >
             <option value={0}>Choose a size option</option>
@@ -81,7 +81,7 @@ const Cakes = ({ product, updatePrice, setNumber }) => {
             id="extra-options"
             className="form-select"
             aria-label="extra options"
-            onChange={() => updatePrice(product.category)}
+            onChange={() => updatePrice(product.category, 1)}
             defaultValue="Any extras?"
           >
             <option value={0}>Any extras?</option>
@@ -105,8 +105,7 @@ const Cakes = ({ product, updatePrice, setNumber }) => {
             min={1}
             max={5}
             onChange={(event) => {
-              setNumber(event.target.value);
-              updatePrice(product.category);
+              updatePrice(product.category, event.target.value);
             }}
           />
         </div>

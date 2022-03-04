@@ -5,7 +5,7 @@ import "../../assets/css/product.css";
 import Cakes from "./Cakes";
 import SugarCookies from "./SugarCookies";
 
-const Product = () => {
+const Product = ({ cart, setCart }) => {
   let history = useHistory();
   const { id } = useParams();
   const [product, setProduct] = useState({});
@@ -15,9 +15,8 @@ const Product = () => {
   }, [history, id]);
 
   const [price, setPrice] = useState(0);
-  const [number, setNumber] = useState(0);
 
-  const updatePrice = (category) => {
+  const updatePrice = (category, number) => {
     if (category === "cakes") {
       const priceValue = parseFloat(
         document.getElementById("size-options").value
@@ -26,11 +25,7 @@ const Product = () => {
         document.getElementById("extra-options").value
       );
 
-      const numberOfProducts = parseInt(
-        document.getElementById("number-of-products").value
-      );
-
-      setPrice(parseInt(numberOfProducts)*(parseFloat(priceValue) + parseFloat(extraValue)));
+      setPrice(number * (priceValue + extraValue));
     }
 
     if (category === "cookies") {
@@ -38,11 +33,7 @@ const Product = () => {
         document.getElementById("size-options").value
       );
 
-      const numberOfProducts = parseInt(
-        document.getElementById("number-of-products").value
-      );
-
-      setPrice(numberOfProducts*priceValue);
+      setPrice(number * priceValue);
     }
   };
 
@@ -67,10 +58,10 @@ const Product = () => {
               Praesentium at dolorem quidem modi.
             </p>
             {product.category === "cakes" && (
-              <Cakes product={product} updatePrice={updatePrice} setNumber={setNumber} />
+              <Cakes product={product} updatePrice={updatePrice} />
             )}
             {product.category === "cookies" && (
-              <SugarCookies product={product} updatePrice={updatePrice} setNumber={setNumber} />
+              <SugarCookies product={product} updatePrice={updatePrice} />
             )}
             <div className="row">
               <div className="col col-6">
@@ -83,7 +74,13 @@ const Product = () => {
             </div>
 
             <div className="row p-2">
-              <button className="btn btn-outline-dark" type="button">
+              <button
+                className="btn btn-outline-dark"
+                type="button"
+                onClick={() => {
+                  setCart(cart + price);
+                }}
+              >
                 <i className="bi-cart-fill me-1" />
                 Add to cart
               </button>

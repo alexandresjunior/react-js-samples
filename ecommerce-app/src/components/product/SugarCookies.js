@@ -1,6 +1,6 @@
 import React from "react";
 
-const SugarCookies = ({ product, updatePrice, setNumber }) => {
+const SugarCookies = ({ product, updatePrice }) => {
   return (
     <>
       <div className="row mt-5 mb-3">
@@ -9,7 +9,7 @@ const SugarCookies = ({ product, updatePrice, setNumber }) => {
             id="size-options"
             className="form-select"
             aria-label="size options"
-            onChange={() => updatePrice(product.category)}
+            onChange={() => updatePrice(product.category, 1)}
             defaultValue="Choose a size option"
           >
             <option value={0}>Choose a size option</option>
@@ -49,8 +49,7 @@ const SugarCookies = ({ product, updatePrice, setNumber }) => {
             min={1}
             max={10}
             onChange={(event) => {
-              setNumber(event.target.value);
-              updatePrice(product.category);
+              updatePrice(product.category, event.target.value);
             }}
           />
         </div>

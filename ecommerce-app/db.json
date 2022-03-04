@@ -1,151 +1,151 @@
 {
-    "products": [
+  "products": [
+    {
+      "id": 1,
+      "category": "cakes",
+      "name": "Naked Cake",
+      "size_options": [
         {
-            "id": 1,
-            "category": "cakes",
-            "name": "Naked Cake",
-            "size_options": [
-                {
-                    "id": 1,
-                    "name": "P",
-                    "price": 20
-                },
-                {
-                    "id": 2,
-                    "name": "M",
-                    "price": 35
-                },
-                {
-                    "id": 3,
-                    "name": "G",
-                    "price": 50
-                }
-            ],
-            "dough_flavor_options": [
-                {
-                    "id": 1,
-                    "name": "Chocolate"
-                },
-                {
-                    "id": 2,
-                    "name": "Vanilla"
-                },
-                {
-                    "id": 3,
-                    "name": "Strawberry"
-                },
-                {
-                    "id": 4,
-                    "name": "Churros"
-                }
-            ],
-            "filling_options": [
-                {
-                    "id": 1,
-                    "name": "Chocolate"
-                },
-                {
-                    "id": 2,
-                    "name": "Vanilla"
-                },
-                {
-                    "id": 3,
-                    "name": "Strawberry"
-                },
-                {
-                    "id": 4,
-                    "name": "Churros"
-                }
-            ],
-            "top_options": [
-                {
-                    "id": 1,
-                    "name": "Chocolate"
-                },
-                {
-                    "id": 2,
-                    "name": "Vanilla"
-                },
-                {
-                    "id": 3,
-                    "name": "Strawberry"
-                },
-                {
-                    "id": 4,
-                    "name": "Churros"
-                }
-            ],
-            "extra_options": [
-                {
-                    "id": 1,
-                    "name": "KitKat",
-                    "price": 7.5
-                },
-                {
-                    "id": 2,
-                    "name": "Oreo",
-                    "price": 5
-                },
-                {
-                    "id": 3,
-                    "name": "White Chocolate Shavings",
-                    "price": 3.5
-                }
-            ]
+          "id": 1,
+          "name": "P",
+          "price": 20
         },
         {
-            "id": 2,
-            "category": "sweets",
-            "name": "Dark Chocolate Ball",
-            "price": 1
+          "id": 2,
+          "name": "M",
+          "price": 35
         },
         {
-            "id": 3,
-            "category": "sweets",
-            "name": "White Chocolate Ball",
-            "price": 1
-        },
-        {
-            "id": 4,
-            "category": "sweets",
-            "name": "Strawberry Ball",
-            "price": 1.1
-        },
-        {
-            "id": 5,
-            "category": "cookies",
-            "name": "Sugar Cookies",
-            "flavor_options": [
-                {
-                    "id": 1,
-                    "name": "Chocolate"
-                },
-                {
-                    "id": 2,
-                    "name": "Vanilla"
-                },
-                {
-                    "id": 3,
-                    "name": "Lemon"
-                }
-            ],
-            "size_options": [
-                {
-                    "id": 1,
-                    "name": "250g",
-                    "price": 15
-                },
-                {
-                    "id": 2,
-                    "name": "500g",
-                    "price": 25
-                },
-                {
-                    "id": 3,
-                    "name": "1kg",
-                    "price": 50
-                }
-            ]
+          "id": 3,
+          "name": "G",
+          "price": 50
         }
-    ]
+      ],
+      "dough_flavor_options": [
+        {
+          "id": 1,
+          "name": "Chocolate"
+        },
+        {
+          "id": 2,
+          "name": "Vanilla"
+        },
+        {
+          "id": 3,
+          "name": "Strawberry"
+        },
+        {
+          "id": 4,
+          "name": "Churros"
+        }
+      ],
+      "filling_options": [
+        {
+          "id": 1,
+          "name": "Chocolate"
+        },
+        {
+          "id": 2,
+          "name": "Vanilla"
+        },
+        {
+          "id": 3,
+          "name": "Strawberry"
+        },
+        {
+          "id": 4,
+          "name": "Churros"
+        }
+      ],
+      "top_options": [
+        {
+          "id": 1,
+          "name": "Chocolate"
+        },
+        {
+          "id": 2,
+          "name": "Vanilla"
+        },
+        {
+          "id": 3,
+          "name": "Strawberry"
+        },
+        {
+          "id": 4,
+          "name": "Churros"
+        }
+      ],
+      "extra_options": [
+        {
+          "id": 1,
+          "name": "KitKat",
+          "price": 7.5
+        },
+        {
+          "id": 2,
+          "name": "Oreo",
+          "price": 5
+        },
+        {
+          "id": 3,
+          "name": "White Chocolate Shavings",
+          "price": 3.5
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category": "sweets",
+      "name": "Dark Chocolate Ball",
+      "price": 1
+    },
+    {
+      "id": 3,
+      "category": "sweets",
+      "name": "White Chocolate Ball",
+      "price": 1
+    },
+    {
+      "id": 4,
+      "category": "sweets",
+      "name": "Strawberry Ball",
+      "price": 1.1
+    },
+    {
+      "id": 5,
+      "category": "cookies",
+      "name": "Sugar Cookies",
+      "flavor_options": [
+        {
+          "id": 1,
+          "name": "Chocolate"
+        },
+        {
+          "id": 2,
+          "name": "Vanilla"
+        },
+        {
+          "id": 3,
+          "name": "Lemon"
+        }
+      ],
+      "size_options": [
+        {
+          "id": 1,
+          "name": "250g",
+          "price": 15
+        },
+        {
+          "id": 2,
+          "name": "500g",
+          "price": 25
+        },
+        {
+          "id": 3,
+          "name": "1kg",
+          "price": 50
+        }
+      ]
+    }
+  ]
 }

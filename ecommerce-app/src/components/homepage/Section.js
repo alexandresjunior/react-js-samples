@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import { search } from "../../api/index";
 import { Link } from "react-router-dom";
 
-const Section = () => {
+const Section = ({ cart, setCart }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     search("/products", setProducts);
   }, []);
+
+  const [price, setPrice] = useState(0);
 
   return (
     <section className="py-5">
@@ -37,8 +39,12 @@ const Section = () => {
                     <div className="row">
                       <div className="col">
                         <select
+                          id="number-of-products"
                           className="form-select btn-outline-dark"
                           defaultValue="10"
+                          onChange={(event) =>
+                            setPrice(event.target.value * product.price)
+                          }
                         >
                           <option value="10">10</option>
                           <option value="25">25</option>
@@ -47,13 +53,21 @@ const Section = () => {
                       </div>
                       <div className="col-auto">
                         <div className="text-center">
-                          <a className="btn btn-outline-dark mt-auto" href="#">
+                          <button
+                            className="btn btn-outline-dark"
+                            type="button"
+                            onClick={() => {
+                              setCart(cart + price);
+                            }}
+                          >
+                            <i className="bi-cart-fill me-1" />
                             Add to cart
-                          </a>
+                          </button>
                         </div>
                       </div>
                     </div>
                   )}
+
                   {product.category !== "sweets" && (
                     <div className="text-center">
                       <Link

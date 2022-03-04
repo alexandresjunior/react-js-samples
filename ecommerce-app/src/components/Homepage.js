@@ -3,11 +3,11 @@ import Header from "./homepage/Header";
 import Footer from "./homepage/Footer";
 import Section from "./homepage/Section";
 
-const Homepage = () => {
+const Homepage = ({ cart, setCart }) => {
   return (
     <>
       <Header />
-      <Section />
+      <Section cart={cart} setCart={setCart} />
       <Footer />
     </>
   );
