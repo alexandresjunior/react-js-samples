@@ -1,6 +1,6 @@
 import React from "react";
 
-const Cakes = ({ product, updatePrice }) => {
+const Cakes = ({ product, updatePrice, setNumber }) => {
   return (
     <>
       <div className="row mt-5 mb-3">
@@ -105,6 +105,7 @@ const Cakes = ({ product, updatePrice }) => {
             min={1}
             max={5}
             onChange={(event) => {
+              setNumber(event.target.value);
               updatePrice(product.category, event.target.value);
             }}
           />

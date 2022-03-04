@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import { search } from "../../api/index";
 import { Link } from "react-router-dom";
 
-const Section = ({ cart, setCart }) => {
+const Section = ({ cart, setCart, addNewItem }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     search("/products", setProducts);
   }, []);
+
+  const [number, setNumber] = useState(1);
 
   const [price, setPrice] = useState(0);
 
@@ -41,11 +43,13 @@ const Section = ({ cart, setCart }) => {
                         <select
                           id="number-of-products"
                           className="form-select btn-outline-dark"
-                          defaultValue="10"
-                          onChange={(event) =>
-                            setPrice(event.target.value * product.price)
-                          }
+                          defaultValue="0"
+                          onChange={(event) => {
+                            setNumber(event.target.value);
+                            setPrice(event.target.value * product.price);
+                          }}
                         >
+                          <option value="0">0</option>
                           <option value="10">10</option>
                           <option value="25">25</option>
                           <option value="50">50</option>
@@ -58,6 +62,11 @@ const Section = ({ cart, setCart }) => {
                             type="button"
                             onClick={() => {
                               setCart(cart + price);
+                              addNewItem({
+                                product: product,
+                                number: number,
+                                price: price,
+                              });
                             }}
                           >
                             <i className="bi-cart-fill me-1" />

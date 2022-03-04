@@ -1,6 +1,6 @@
 import React from "react";
 
-const SugarCookies = ({ product, updatePrice }) => {
+const SugarCookies = ({ product, updatePrice, setNumber }) => {
   return (
     <>
       <div className="row mt-5 mb-3">
@@ -49,6 +49,7 @@ const SugarCookies = ({ product, updatePrice }) => {
             min={1}
             max={10}
             onChange={(event) => {
+              setNumber(event.target.value);
               updatePrice(product.category, event.target.value);
             }}
           />

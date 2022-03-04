@@ -24,13 +24,13 @@ const Navigation = ({ cart }) => {
           id="navbarSupportedContent"
         >
           <form className="d-flex">
-            <button className="btn btn-outline-light" type="submit">
+            <Link className="btn btn-outline-light" to={"/cart"}>
               <i className="bi-cart-fill me-1"></i>
               Cart
               <span className="badge bg-light text-dark ms-1 rounded-pill">
                 {cart}
               </span>
-            </button>
+            </Link>
           </form>
         </div>
       </div>

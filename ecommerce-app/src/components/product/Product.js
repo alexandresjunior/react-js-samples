@@ -5,10 +5,11 @@ import "../../assets/css/product.css";
 import Cakes from "./Cakes";
 import SugarCookies from "./SugarCookies";
 
-const Product = ({ cart, setCart }) => {
+const Product = ({ cart, setCart, addNewItem }) => {
   let history = useHistory();
   const { id } = useParams();
   const [product, setProduct] = useState({});
+  const [number, setNumber] = useState(1);
 
   useEffect(() => {
     search(`/products/${id}`, setProduct);
@@ -58,10 +59,18 @@ const Product = ({ cart, setCart }) => {
               Praesentium at dolorem quidem modi.
             </p>
             {product.category === "cakes" && (
-              <Cakes product={product} updatePrice={updatePrice} />
+              <Cakes
+                product={product}
+                updatePrice={updatePrice}
+                setNumber={setNumber}
+              />
             )}
             {product.category === "cookies" && (
-              <SugarCookies product={product} updatePrice={updatePrice} />
+              <SugarCookies
+                product={product}
+                updatePrice={updatePrice}
+                setNumber={setNumber}
+              />
             )}
             <div className="row">
               <div className="col col-6">
@@ -79,6 +88,11 @@ const Product = ({ cart, setCart }) => {
                 type="button"
                 onClick={() => {
                   setCart(cart + price);
+                  addNewItem({
+                    product: product,
+                    number: number,
+                    price: price,
+                  });
                 }}
               >
                 <i className="bi-cart-fill me-1" />
